@@ -7,6 +7,9 @@ const outputName = document.getElementById("outputUserName");
 const outputPriceTot = document.getElementById("outputPrice");
 const optionAge = document.querySelector("[name='option-age']");
 const outputTypeTicket = document.getElementById("outputType")
+const carrozzaElement = document.getElementById("carrozza")
+const codiceElement = document.getElementById("codice")
+
 
 
 
@@ -49,5 +52,9 @@ submitElement.addEventListener("click", function() {
     /* DOPO AVER INSERITO I DATI VENGONO RESETTATI */
     inputName.value = "";
     inputDistance.value = "";
+
+    /* NUMERO DI CARROZZA E CODICE CP GENERATI CASUALMENTE */ 
+    carrozzaElement.innerHTML = Math.floor(Math.random()*10) + 1;
+    codiceElement.innerHTML = Math.floor(Math.random()*90000) + 10000;
 });
 
