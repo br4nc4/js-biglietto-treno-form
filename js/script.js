@@ -26,9 +26,11 @@ let realSale = "";
 /* L'EVENTO RIGUARDA FAR COMPARIRE IL NOME NELLA PARTE INFERIORE DELL'APP, SEZIONE NOME PASSEGGERO */
 submitElement.addEventListener("click", function() {
     outputName.innerHTML = inputName.value;
+    /* STABILISCO LA PRIMA CONDIZIONE */
+    /* SE VIENE SELEZIONATO MINORENNE DAL MENU CON LE VARIEM OPZIONI ALLORA VIENE APPLICATO LO SCONTO AL PREZZO FINALE */
     if (optionAge1.value = "minorenne"){
-        realSale = (tariffaKm * inputDistance.value * sconto1);
-        realPrice = ((tariffaKm * inputDistance) - realSale);
+        realSale = parseInt(tariffaKm * inputDistance.value * sconto1);
+        realPrice = parseInt((tariffaKm * inputDistance.value) - realSale);
         outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
     }
     
