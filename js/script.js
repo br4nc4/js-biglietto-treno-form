@@ -3,7 +3,12 @@
 const inputName = document.querySelector("[name='userName']");
 const inputDistance = document.querySelector("[name='distanceKm']");
 const submitElement = document.getElementById("submitButton");
-const outputName = document.getElementById("outputUserName")
+const outputName = document.getElementById("outputUserName");
+let outputPriceTot = document.querySelector("outputPrice");
+
+/* VARIABILE CHE SERVE AL CALCOLO DEL PREZZO DEL BIGLIETTO */
+const tariffaKm = 0.21;
+
 
 /* ATTRIBUISCO L'EVENTO CHE VERRà GENERATO UNA VOLTA CLICCATO IL BUTTON "GENERA" */
 /* L'EVENTO RIGUARDA FAR COMPARIRE IL NOME NELLA PARTE INFERIORE DELL'APP, SEZIONE NOME PASSEGGERO */
