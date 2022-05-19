@@ -14,5 +14,5 @@ outputPriceTot = tariffaKm * inputDistance.value;
 /* L'EVENTO RIGUARDA FAR COMPARIRE IL NOME NELLA PARTE INFERIORE DELL'APP, SEZIONE NOME PASSEGGERO */
 submitElement.addEventListener("click", function() {
     outputName.innerHTML = inputName.value;
-    
+    outputPriceTot.innerHTML = outputPriceTot.value;
 });
