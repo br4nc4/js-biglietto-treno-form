@@ -5,7 +5,7 @@ const inputDistance = document.querySelector("[name='distanceKm']");
 const submitElement = document.getElementById("submitButton");
 const outputName = document.getElementById("outputUserName");
 const outputPriceTot = document.getElementById("outputPrice");
-let optionAge1 = document.getElementById("option1");
+let optionAge = document.getElementById("optionAge");
 
 
 /* VARIABILI CHE SERVONO AL CALCOLO DEL PREZZO DEL BIGLIETTO */
@@ -28,9 +28,13 @@ submitElement.addEventListener("click", function() {
     outputName.innerHTML = inputName.value;
     /* STABILISCO LA PRIMA CONDIZIONE */
     /* SE VIENE SELEZIONATO MINORENNE DAL MENU CON LE VARIEM OPZIONI ALLORA VIENE APPLICATO LO SCONTO AL PREZZO FINALE */
-    if (optionAge1.value = "minorenne"){
+    if (optionAge.value = "minorenne"){
         realSale = parseInt(tariffaKm * inputDistance.value * sconto1);
         realPrice = parseInt((tariffaKm * inputDistance.value) - realSale);
+        outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
+    }
+    else if (optionAge.value = "maggiorenne"){
+        realPrice = (tariffaKm * inputDistance.value);
         outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
     }
     
