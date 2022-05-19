@@ -10,7 +10,7 @@
 </head>
 <body>
     <main>
-        <div class="container app-bg vh-100">
+        <div class="container app-bg vh-100"> <!-- VIEWPORT H-100 MOMENTANEO -->
             <div class="row flex-column align-items-center">
                 <!-- PARTE SUPERIORE DELL'APP -->
                 <div class="col">
@@ -26,12 +26,12 @@
                                     <!-- PRIMO INPUT NOME E COGNOME  -->
                                     <div class="d-flex flex-column">
                                         <label class="text-center lab-cl" for="">Nome e congnome</label>
-                                        <input type="text">
+                                        <input type="text" name="userName">
                                     </div>
                                     <!-- SECONDO INPUT KM DA PERCORRERE -->
                                     <div class="d-flex flex-column">
                                         <label class="text-center lab-cl" for="">Km da percorrere</label>
-                                        <input type="text">
+                                        <input type="text" name="distanceKm">
                                     </div>
                                     <!-- SELEZIONA FASCIA D'ETà -->
                                     <div class="d-flex flex-column">
@@ -45,16 +45,16 @@
                             </div>
                             <!-- SEZIONE BOTTONI GENERA E ANNULLA BIGLIETTO -->
                             <div>
-                                <button><span class="cl-btn-txt fw-bold">Genera</span></button>
+                                <button type="button" id="submitButton"><span class="cl-btn-txt fw-bold">Genera</span></button>
 
-                                <button><span class="cl-btn-txt fw-bold">Annulla</span></button>
+                                <button type="button" id=""><span class="cl-btn-txt fw-bold">Annulla</span></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- PARTE INFERIORE DELL'APP CHE COMPARE SOLO DOPO AVER CLICCATO SUL BOTTONE "GENERA" -->
                 <div class="col show-details-block">
-                    
+
                     <div class="container">
                         <!-- TITOLO SECONDA PARTE DELL'APP TICKETTRAIN --> 
                         <div class="text-center">
