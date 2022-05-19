@@ -5,7 +5,8 @@ const inputDistance = document.querySelector("[name='distanceKm']");
 const submitElement = document.getElementById("submitButton");
 const outputName = document.getElementById("outputUserName");
 const outputPriceTot = document.getElementById("outputPrice");
-let optionAge = document.getElementById("optionAge");
+const optionAge = document.querySelector("[name='option-age']");
+
 
 
 /* VARIABILI CHE SERVONO AL CALCOLO DEL PREZZO DEL BIGLIETTO */
@@ -15,11 +16,8 @@ const sconto2 = 0.4;
 
 
 /* LE VARIABILI INIZIALMENTE DEVONO ESSERE VUOTE E SOLO SUCCESSIVAMENTE ASSUMERE IL VAOLRE NEL CALCOLO PER IL PREZZO DEL BIGLIETTO */
-let realPrice = ""; 
 let realSale = "";
-
-
-
+let realPrice = ""; 
 
 
 /* ATTRIBUISCO L'EVENTO CHE VERRà GENERATO UNA VOLTA CLICCATO IL BUTTON "GENERA" */
@@ -28,15 +26,14 @@ submitElement.addEventListener("click", function() {
     outputName.innerHTML = inputName.value;
     /* STABILISCO LA PRIMA CONDIZIONE */
     /* SE VIENE SELEZIONATO MINORENNE DAL MENU CON LE VARIEM OPZIONI ALLORA VIENE APPLICATO LO SCONTO AL PREZZO FINALE */
-    if (optionAge.value = "minorenne"){
+    if (optionAge.value === "minorenne"){
         realSale = parseInt(tariffaKm * inputDistance.value * sconto1);
         realPrice = parseInt((tariffaKm * inputDistance.value) - realSale);
         outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
     }
-    else if (optionAge.value = "maggiorenne"){
+    else if (optionAge.value === "maggiorenne"){
         realPrice = (tariffaKm * inputDistance.value);
         outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
     }
-    
 });
 
