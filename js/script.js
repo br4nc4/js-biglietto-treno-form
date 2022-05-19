@@ -46,5 +46,8 @@ submitElement.addEventListener("click", function() {
         outputPriceTot.innerHTML = realPrice.toFixed(2) + "€";
         outputTypeTicket.innerHTML = "Bigletto Scontato";
     }
+    /* DOPO AVER INSERITO I DATI VENGONO RESETTATI */
+    inputName.value = "";
+    inputDistance.value = "";
 });
 
