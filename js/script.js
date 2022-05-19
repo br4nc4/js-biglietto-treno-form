@@ -3,12 +3,14 @@
 const inputName = document.querySelector("[name='userName']");
 const inputDistance = document.querySelector("[name='distanceKm']");
 const submitElement = document.getElementById("submitButton");
+const nullElement = document.getElementById("nullButton");
 const outputName = document.getElementById("outputUserName");
 const outputPriceTot = document.getElementById("outputPrice");
 const optionAge = document.querySelector("[name='option-age']");
-const outputTypeTicket = document.getElementById("outputType")
-const carrozzaElement = document.getElementById("carrozza")
-const codiceElement = document.getElementById("codice")
+const outputTypeTicket = document.getElementById("outputType");
+const carrozzaElement = document.getElementById("carrozza");
+const codiceElement = document.getElementById("codice");
+let show = document.querySelector(".show-details-block");
 
 
 
@@ -56,5 +58,15 @@ submitElement.addEventListener("click", function() {
     /* NUMERO DI CARROZZA E CODICE CP GENERATI CASUALMENTE */ 
     carrozzaElement.innerHTML = Math.floor(Math.random()*10) + 1;
     codiceElement.innerHTML = Math.floor(Math.random()*90000) + 10000;
+
+
+    /* UNA VOLTA CLICCATO SUL BOTTONE "GENERA" RIMUOVO LA CLASSE SHOW-DETAILS CHE SPECIFICA DISPLAY = NONE */
+    show.classList.remove("show-details-block");
 });
+
+
+nullElement.addEventListener("click", function() {
+    /* UNA VOLTA CLICCATO SUL BOTTONE "ANNULLA" IL BIGLIETTO GENERATO IN PRECEDENZA VIENE ELIMINATO */
+    show.classList.add("show-details-block")
+})
 
