@@ -29,6 +29,7 @@ let realPrice = 0;
 /* ATTRIBUISCO L'EVENTO CHE VERRà GENERATO UNA VOLTA CLICCATO IL BUTTON "GENERA" */
 /* L'EVENTO RIGUARDA FAR COMPARIRE IL NOME NELLA PARTE INFERIORE DELL'APP, SEZIONE NOME PASSEGGERO */
 submitElement.addEventListener("click", function() {
+
     outputName.innerHTML = inputName.value;
     /* STABILISCO LA PRIMA CONDIZIONE */
     /* SE VIENE SELEZIONATO MINORENNE DAL MENU CON LE VARIEM OPZIONI ALLORA VIENE APPLICATO LO SCONTO AL PREZZO FINALE */
@@ -65,8 +66,12 @@ submitElement.addEventListener("click", function() {
 });
 
 
+/*  */
 nullElement.addEventListener("click", function() {
-    /* UNA VOLTA CLICCATO SUL BOTTONE "ANNULLA" IL BIGLIETTO GENERATO IN PRECEDENZA VIENE ELIMINATO */
-    show.classList.add("show-details-block")
+    document.getElementById("outputUserName").innerHTML = "";
+    document.getElementById("outputType").innerHTML = "";
+    document.getElementById("carrozza").innerHTML = "";
+    document.getElementById("codice").innerHTML = "";
+    document.getElementById("outputPrice").innerHTML = "";
 })
 
