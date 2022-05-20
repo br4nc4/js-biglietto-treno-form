@@ -66,7 +66,7 @@ submitElement.addEventListener("click", function() {
 });
 
 
-/*  */
+/* FUNZIONE PER SVUOTARE I CAMPI CLICCANDO SUL BOTTONE "ANNULLA" */
 nullElement.addEventListener("click", function() {
     document.getElementById("outputUserName").innerHTML = "";
     document.getElementById("outputType").innerHTML = "";
